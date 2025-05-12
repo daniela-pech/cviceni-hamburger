@@ -4,8 +4,10 @@ import './style.css';
 
 export const HomePage = () => {
   const [menuOpened, setMenuOpened] = useState(false);
-  const handleSelectItem = () => {
+  const [pageTitle, setPageTitle] = useState('Domů');
+  const handleSelectItem = (page) => {
     setMenuOpened(false);
+    setPageTitle(page);
   };
   return (
     <>
@@ -25,7 +27,7 @@ export const HomePage = () => {
         </div>
       </header>
       <main>
-        <h1>Domů</h1>
+        <h1>{pageTitle}</h1>
       </main>
     </>
   );
